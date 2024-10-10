@@ -4,12 +4,12 @@ This project is a beacon of empowerment, bringing citizens together under a unif
 
 Key Objectives:
 
--Empower Individuals: Grant every citizen the ability to access and manage their own medical history, fostering informed decisions and proactive health management.
+**Empower Individuals:** Grant every citizen the ability to access and manage their own medical history, fostering informed decisions and proactive health management.
 
--Government Insights: Allow the government to monitor population health trends and identify areas for intervention, driving informed public health policies.
+**Government Insights:** Allow the government to monitor population health trends and identify areas for intervention, driving informed public health policies.
 
--Emergency Response: Provide healthcare providers immediate access to critical patient information during emergencies, even when the patient is in unfamiliar locations.
+**Emergency Response:** Provide healthcare providers immediate access to critical patient information during emergencies, even when the patient is in unfamiliar locations.
 
--Seamless Accessibility: Ensure secure, 24/7 access to medical data for both individuals and healthcare providers, improving service delivery and response times.
+**Seamless Accessibility:** Ensure secure, 24/7 access to medical data for both individuals and healthcare providers, improving service delivery and response times.
 
 By revolutionizing the national healthcare system, this web application aims to address real-world challenges, streamlining healthcare services and significantly impacting lives during critical moments. Together, we are shaping a healthier, more informed nation where everyone plays a pivotal role in their health narrative.
