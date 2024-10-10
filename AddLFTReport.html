@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LFT Blood Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 100%;
+            margin: auto;
+            padding: 20px;
+            background-image: url(../images/Blood.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .column {
+            flex-basis: calc(40% - 10px);
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="datetime-local"],
+        input[type="number"] {
+            width: calc(90% - 20px);
+            padding: 10px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+            width: 10%;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        span {
+            margin-left: 10px;
+        }
+
+        /* Responsive layout */
+        @media (max-width: 768px) {
+            .column {
+                flex-basis: 100%;
+            }
+
+            input[type="submit"] {
+                width: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="margin: 0px; margin-bottom: 15px;">LFT Blood Report</h1>
+        <h3>Add the following details :</h3>
+        <form id="lftForm">
+            <div class="row">
+                <div class="column">
+                    <label for="BUID">Benificiary User ID:</label>
+                    <input type="number" id="BUID" name="BUID" required="" maxlength="12"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                </div>
+                <div class="column">
+                    <label for="reportMakerUID">Report Maker UID:</label>
+                    <input type="number" id="reportMakerUID" required="" maxlength="12"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="sampleCollectionTime">Sample Collection Time:</label>
+                    <input type="datetime-local" id="sampleCollectionTime" name="sampleCollectionTime" required=""
+                        maxlength="12"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                </div>
+                <div class="column">
+                    <label for="sampleCollectorUID">Sample Collector UID:</label>
+                    <input type="number" id="sampleCollectorUID" name="sampleCollectorUID" required="" maxlength="12"
+                        oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="sampleCollectedAddress">Address (of sample collected):</label>
+                    <input type="text" id="sampleCollectedAddress" name="sampleCollectedAddress" required>
+                </div>
+            </div>
+            <h3>Add the report :</h3>
+            <div class="row">
+                <div class="column">
+                    <label for="ALT">ALT (SGPT):</label>
+                    <input type="number" step="0.01" id="ALT" name="ALT" required><span>U/L</span>
+                </div>
+                <div class="column">
+                    <label for="AST">AST (SGOT):</label>
+                    <input type="number" step="0.01" id="AST" name="AST" required><span>U/L</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="AST_ALT">AST : ALT Ratio:</label>
+                    <input type="number" step="0.01" id="AST_ALT" name="AST_ALT" required>
+                </div>
+                <div class="column">
+                    <label for="GGPT">GGPT:</label>
+                    <input type="number" step="0.01" id="GGPT" name="GGPT" required><span>U/L</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="ALP">ALP (Alkaline Phosphatase):</label>
+                    <input type="number" step="0.01" id="ALP" name="ALP" required><span>U/L</span>
+                </div>
+                <div class="column">
+                    <label for="totalBilirubin">Total Bilirubin:</label>
+                    <input type="number" step="0.01" id="totalBilirubin" name="totalBilirubin"
+                        required><span>mg/dL</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="directBilirubin">Direct Bilirubin:</label>
+                    <input type="number" step="0.01" id="directBilirubin" name="directBilirubin"
+                        required><span>mg/dL</span>
+                </div>
+                <div class="column">
+                    <label for="indirectBilirubin">Indirect Bilirubin:</label>
+                    <input type="number" step="0.01" id="indirectBilirubin" name="indirectBilirubin"
+                        required><span>mg/dL</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="totalProtein">Total Protein:</label>
+                    <input type="number" step="0.01" id="totalProtein" name="totalProtein" required><span>g/dL</span>
+                </div>
+                <div class="column">
+                    <label for="albumin">Albumin:</label>
+                    <input type="number" step="0.01" id="albumin" name="albumin" required><span>g/dL</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="column">
+                    <label for="globulin">Globulin:</label>
+                    <input type="number" step="0.01" id="globulin" name="globulin" required><span>g/dL</span>
+                </div>
+                <div class="column">
+                    <label for="agRatio">A : G Ratio:</label>
+                    <input type="number" step="0.01" id="agRatio" name="agRatio" required>
+                </div>
+            </div>
+            <center><input type="submit" value="Submit"></center>
+        </form>
+    </div>
+</body>
+
+</html>
